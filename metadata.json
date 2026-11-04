@@ -1,0 +1,8 @@
+{
+  "name": "Remix RestoSync - Arsitektur Inventaris Real-Time Restoran",
+  "description": "Blueprint arsitektur sistem, flowchart interaktif per modul (Kasir, Dapur, Stok Gudang, Dashboard), spesifikasi API REST/WebSocket, dan skema basis data inventaris restoran real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

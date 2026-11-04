@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0B0F19;
+    color: #F1F5F9;
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* ==========================================================================
+   DARK SLATE NEUMORPHISM DESIGN SYSTEM
+   Base canvas: #0B0F19 | Elevated surface: #121A2B | Recessed/Inset: #0E1524
+   Dual-lighting: Top-left light catch + Bottom-right deep soft shadow
+   ========================================================================== */
+
+/* Raised / Extruded Neumorphic Card */
+.neu-flat {
+  background: #121A2B;
+  box-shadow: 
+    7px 7px 18px rgba(0, 0, 0, 0.65),
+    -5px -5px 14px rgba(30, 41, 59, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Slightly shallower raised surface for small items/cards */
+.neu-flat-sm {
+  background: #141E32;
+  box-shadow: 
+    4px 4px 10px rgba(0, 0, 0, 0.55),
+    -3px -3px 8px rgba(30, 41, 59, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Inset / Sunken Neumorphic Surface (Wells, Inputs, Search, Recessed Areas) */
+.neu-pressed {
+  background: #0E1524;
+  box-shadow: 
+    inset 3px 3px 7px rgba(0, 0, 0, 0.7),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/* Neumorphic Clickable Button with tactile push feedback */
+.neu-btn {
+  background: linear-gradient(145deg, #162238, #111A2C);
+  box-shadow: 
+    5px 5px 12px rgba(0, 0, 0, 0.6),
+    -3px -3px 9px rgba(30, 41, 59, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn:hover {
+  background: linear-gradient(145deg, #18263E, #131E33);
+  box-shadow: 
+    6px 6px 14px rgba(0, 0, 0, 0.65),
+    -4px -4px 11px rgba(38, 52, 75, 0.35);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.neu-btn:active {
+  background: #0E1524;
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.75),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.04);
+  transform: translateY(1px);
+}
+
+/* Active / Pressed Neumorphic Tab Button */
+.neu-btn-active {
+  background: #0E1524;
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.8),
+    inset -2px -2px 4px rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+}
+
+/* Primary Cyan Accent Neumorphic Button */
+.neu-btn-primary {
+  background: linear-gradient(145deg, #0284C7, #0369A1);
+  box-shadow: 
+    5px 5px 14px rgba(0, 0, 0, 0.6),
+    -3px -3px 9px rgba(14, 165, 233, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #FFFFFF;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn-primary:hover {
+  background: linear-gradient(145deg, #0EA5E9, #0284C7);
+  box-shadow: 
+    6px 6px 16px rgba(0, 0, 0, 0.65),
+    -4px -4px 12px rgba(14, 165, 233, 0.35);
+}
+
+.neu-btn-primary:active {
+  background: #0369A1;
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.15);
+  transform: translateY(1px);
+}
+
+/* Emerald Success Neumorphic Button */
+.neu-btn-emerald {
+  background: linear-gradient(145deg, #059669, #047857);
+  box-shadow: 
+    5px 5px 14px rgba(0, 0, 0, 0.6),
+    -3px -3px 9px rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #FFFFFF;
+}
+
+.neu-btn-emerald:hover {
+  background: linear-gradient(145deg, #10B981, #059669);
+}
+
+.neu-btn-emerald:active {
+  background: #047857;
+  box-shadow: 
+    inset 3px 3px 6px rgba(0, 0, 0, 0.7),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.15);
+}
+
+/* Neumorphic Indicator Tag / Pill */
+.neu-tag {
+  background: #0F1728;
+  box-shadow: 
+    inset 1px 1px 3px rgba(0, 0, 0, 0.6),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Dark Neumorphic Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+  border: 2px solid #0B0F19;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
